@@ -1,2 +1,0 @@
-[$(asctime)s]pytensor.tensor.blas - WARNING - Using NumPy C-API based implementation for BLAS functions.
-[$(asctime)s]matplotlib.font_manager - INFO - generated new fontManager

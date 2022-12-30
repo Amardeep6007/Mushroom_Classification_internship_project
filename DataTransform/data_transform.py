@@ -1,6 +1,6 @@
 from datetime import datetime 
 import os, sys
-from log_folder.log import logging as lg
+from log import logging as lg
 import numpy as np
 import pandas as pd
 #from sklearn_pandas import SingleImputer
