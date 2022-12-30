@@ -1,0 +1,8 @@
+[$(asctime)s]pytensor.tensor.blas - WARNING - Using NumPy C-API based implementation for BLAS functions.
+[$(asctime)s]root - INFO - we are inside the decision tree classifier
+[$(asctime)s]root - ERROR - Error has occured
+[$(asctime)s]root - ERROR - name 'pca' is not defined
+Traceback (most recent call last):
+  File "/config/workspace/ML_Models/DecisionTreeClassifier.py", line 23, in Decision_tree_Classifier_method
+    pca_fit = pca.fit_transform(x)
+NameError: name 'pca' is not defined

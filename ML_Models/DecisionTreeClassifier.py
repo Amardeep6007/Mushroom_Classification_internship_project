@@ -8,11 +8,11 @@ import pickle
 from sklearn.decomposition import PCA
 from log import logging as lg 
 
-class DecisionTreeClassifier:
+class DecisionTreeClassifierclass:
     def __init__(self):
         self.logger = lg
 
-    def Decision_tree_Classifier(self):
+    def Decision_tree_Classifier_method(self):
         try:
             lg.info('we are inside the decision tree classifier')
             df = pd.read_csv(r'/config/workspace/cleaned_nd_Encoded_mushroom.csv')
@@ -20,7 +20,7 @@ class DecisionTreeClassifier:
             y= df['class']
 
             pca1 = PCA(n_components=7)
-            pca_fit = pca.fit_transform(x)
+            pca_fit = pca1.fit_transform(x)
 
             x_train, x_test, y_train, y_test = train_test_split(pca_fit, y, test_size = 0.20, random_state = 42)
 
