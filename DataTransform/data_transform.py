@@ -1,9 +1,9 @@
 from datetime import datetime 
 import os, sys
-from logger import logging as lg
+from log_folder.log import logging as lg
 import numpy as np
 import pandas as pd
-from sklearn_pandas import SingleImputer
+#from sklearn_pandas import SingleImputer
 from sklearn_pandas import CategoricalImputer
 from autoimpute.imputations import SingleImputer,MultipleImputer
 from autoimpute.imputations.series import MultinomialLogisticImputer
