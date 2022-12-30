@@ -2,11 +2,14 @@ from flask import Flask, request, render_template
 import numpy as np 
 import pandas as pd
 import pickle
-from sklearn.tree import DecisionTreeClassifier
+import os
+#from sklearn.tree import DecisionTreeClassifier
+os.putenv('LANG', 'en_US.UTF-8')
+os.putenv('LC_ALL', 'en_US.UTF-8')
 
 app = Flask(__name__)
 
-model = pickle.load(open(file))
+model = pickle.load(open(r'/config/workspace/Model_saved/svc_Pickle.pkl', 'rb'))
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -44,14 +47,16 @@ def predict():
             else:
                 g = 'edible'
 
-            return render_template('webapp.html', result = 'Mushroom is {}'.format(g))
+            return render_template(f'webapp.html', result = 'Mushroom is {g}')
         
         except Exception as e:
             print("The exception message is", e)
-            return 'Somethin went Wrong'
+            return 'Something went Wrong'
     else:
         return render_template('index.html')   
 
 if __name__=='__main__':
-    app.run(host='127.0.0.1', port=8080, debug= True) 
+    app.run(host='127.0.0.1', port=8080) 
+    #app.run(debug=True)
+
 
