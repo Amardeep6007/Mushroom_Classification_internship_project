@@ -18,7 +18,7 @@ class dataTransform:
     def data_cleaning_and_extract_balanced_Dataset(self):
         try:
             lg.info('we are inside the data frame')
-            df = pd.read_csv(r'/config/workspace/mushroom.csv') #read the csv file and store in the dataframe
+            df = pd.read_csv(r'/config/workspace/mushrooms.csv') #read the csv file and store in the dataframe
             
             lg.info('setting the max column of the data frame')
             pd.set_option('display.max_columns', None) #setting the data frame to view all the columns of the data frame
