@@ -45,7 +45,7 @@ class dataTransform:
             new_df =impute.transform(df) #transforming the data frame to impute the null values in the data frame
             
             lg.info(r'exporting the cleaned data frame')
-            new_df = new_df.to_csv(r'/config/workspace/cleaned_mushroom.csv') #exporting the cleaned csv
+            new_df = new_df.to_csv(r'/config/workspace/cleaned_mushroom.csv', index= False) #exporting the cleaned csv
             print((new_df))
         except exception as e:
             print('check the log file incase your code fails')
