@@ -1,0 +1,10 @@
+[$(asctime)s]pytensor.tensor.blas - WARNING - Using NumPy C-API based implementation for BLAS functions.
+[$(asctime)s]root - INFO - we are inside the data frame
+[$(asctime)s]root - INFO - setting the max column of the data frame
+[$(asctime)s]root - INFO - printin the top 5 records of the data set
+[$(asctime)s]root - INFO - counting the "?" marks in the stalk-root column
+[$(asctime)s]root - INFO - replacing the "?" marks with null values
+[$(asctime)s]root - INFO - count the null values in each column of the data frame
+[$(asctime)s]root - INFO - dropping the veil-type column
+[$(asctime)s]root - INFO - inputing the null values in the data frame
+[$(asctime)s]root - INFO - exporting the cleaned data frame

@@ -3,6 +3,7 @@ import os, sys
 from log import logging as lg
 import numpy as np
 import pandas as pd
+import csv
 #from sklearn_pandas import SingleImputer
 from sklearn_pandas import CategoricalImputer
 from autoimpute.imputations import SingleImputer,MultipleImputer
@@ -38,15 +39,15 @@ class dataTransform:
             lg.info(r'dropping the veil-type column')
             df = df.drop(['veil-type'], axis=1) #dropping the veil-type column because it has only 1 category mentioned which does not provide any insight
             
-            lg.info(r'inputing the null values in the data frame')
+            lg.info(r'imputing the null values in the data frame')
             impute =SingleImputer(strategy= 'categorical') #creating object of SingleImputer class
             impute.fit(df) #fitting the data frame to impute the null values in the data frame
             new_df =impute.transform(df) #transforming the data frame to impute the null values in the data frame
             
             lg.info(r'exporting the cleaned data frame')
-            new_df = pd.to_csv(r'/config/workspace/cleaned_mushroom.csv') #exporting the cleaned csv
+            new_df = new_df.to_csv(r'/config/workspace/cleaned_mushroom.csv') #exporting the cleaned csv
             print((new_df))
-        except Exception as e:
+        except exception as e:
             print('check the log file incase your code fails')
-            lg.Exception(str(e))
+            lg.exception(str(e))
             lg.error('errotr has occured')
