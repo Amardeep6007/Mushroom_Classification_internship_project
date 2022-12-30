@@ -13,13 +13,14 @@ class encoder:
             le = LabelEncoder()
             lg.info("Inside the Encoded_Dataframe method")
             df = pd.read_csv(r'/config/workspace/cleaned_mushroom.csv')
-            for i in df.column:
+            for i in df.columns:
                 df[i] = le.fit_transform(df[i])
 
-                df1= df.to_csv(r'/config/workspace/cleaned_nd_Encoded_mushroom.csv')
-                prin(df1)
+                df1= df.to_csv(r'/config/workspace/cleaned_nd_Encoded_mushroom.csv', index=False)
+            
+            print(df1)
         except Exception as e:
-            lg.Exception(e)
+            lg.exception(e)
             return e
 
 #calling the encoder class

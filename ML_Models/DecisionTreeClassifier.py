@@ -6,7 +6,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 import pickle
 from sklearn.decomposition import PCA
-import logging as lg 
+from log import logging as lg 
 
 class DecisionTreeClassifier:
     def __init__(self):
@@ -38,4 +38,4 @@ class DecisionTreeClassifier:
         except Exception as e:
             print('Check log in case your code fails')
             lg.error("Error has occured")
-            lg.Exception(str(e))
+            lg.exception(str(e))

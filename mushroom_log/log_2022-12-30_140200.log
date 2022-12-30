@@ -1,0 +1,9 @@
+[$(asctime)s]pytensor.tensor.blas - WARNING - Using NumPy C-API based implementation for BLAS functions.
+[$(asctime)s]root - INFO - Inside the Encoded_Dataframe method
+[$(asctime)s]root - ERROR - 'DataFrame' object has no attribute 'column'
+Traceback (most recent call last):
+  File "/config/workspace/Encoding/encoder.py", line 16, in Encoded_Dataframe
+    for i in df.column:
+  File "/config/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 5583, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'column'

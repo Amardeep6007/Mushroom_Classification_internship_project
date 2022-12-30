@@ -1,0 +1,7 @@
+[$(asctime)s]pytensor.tensor.blas - WARNING - Using NumPy C-API based implementation for BLAS functions.
+[$(asctime)s]root - INFO - Inside the Encoded_Dataframe method
+[$(asctime)s]root - ERROR - name 'prin' is not defined
+Traceback (most recent call last):
+  File "/config/workspace/Encoding/encoder.py", line 20, in Encoded_Dataframe
+    prin(df1)
+NameError: name 'prin' is not defined
