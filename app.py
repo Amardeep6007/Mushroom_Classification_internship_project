@@ -4,8 +4,8 @@ import pandas as pd
 import pickle
 import os
 #from sklearn.tree import DecisionTreeClassifier
-os.putenv('LANG', 'en_US.UTF-8')
-os.putenv('LC_ALL', 'en_US.UTF-8')
+#os.putenv('LANG', 'en_US.UTF-8')
+#os.putenv('LC_ALL', 'en_US.UTF-8')
 
 app = Flask(__name__)
 
@@ -25,7 +25,7 @@ def fill():
 
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
-    if request.methods == 'POST':
+    if request.method == 'POST':
         try:
             gillcolor = float(request.form["gill-color"])
             sporeprintcolor = float(request.form["spore-print-color"])
@@ -47,7 +47,7 @@ def predict():
             else:
                 g = 'edible'
 
-            return render_template(f'webapp.html', result = 'Mushroom is {g}')
+            return render_template('webapp.html', result = f'Mushroom is {g}')
         
         except Exception as e:
             print("The exception message is", e)
@@ -55,8 +55,8 @@ def predict():
     else:
         return render_template('index.html')   
 
-if __name__=='__main__':
-    app.run(host='127.0.0.1', port=8080) 
+if __name__== "__main__":
+    app.run(host='0.0.0.0', port=8080) 
     #app.run(debug=True)
 
 
